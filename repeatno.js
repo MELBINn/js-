@@ -21,7 +21,7 @@ numbersArray.forEach((number) => {
 });
 
 // Step 5: Iterate through the keys of the numberCount object
-Object.keys(numberCount).forEach((number) => {
+Object.keys(numberCount).forEach((number) => {// array containing the enumerable property names (keys) of the numberCount object.
 
     // Step 6: Check if the count of the number is greater than 1 (indicating repetition)
     if (numberCount[number] > 1) {
