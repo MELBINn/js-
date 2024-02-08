@@ -37,3 +37,5 @@ function subArraySum( arr, n, sum)
 	let n = arr.length;
 	let sum = 23;
 	subArraySum(arr, n, sum);
+
+    //i=15 j i start chyth motham subarray sum nokkum idayil currentsum sum aya close
