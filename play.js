@@ -121,26 +121,49 @@
 //       result +=(i)
 //     }
 //     console.log(result)
+// // }
+// // sum([1,2,3,4,5])
+
+
+// function sumOfElements(numbers) {
+//     let result = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         result += numbers[i];
+//     }
+//     console.log("Sum of Elements:", result);
 // }
-// sum([1,2,3,4,5])
 
+// function sumOfIndices(numbers) {
+//     let result = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         result += i;
+//     }
+//     console.log("Sum of Indices:", result);
+// }
 
-function sumOfElements(numbers) {
-    let result = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        result += numbers[i];
+// // Example with an array containing negative numbers
+// sumOfElements([-1, -2, -3]);  // Sum of Elements: -6
+// sumOfIndices([-1, -2, -3]);   // Sum of Indices: 3
+const products = [
+    { name: 'Product A', category: 'Electronics' },
+    { name: 'Product B', category: 'Clothing' },
+    { name: 'Product C', category: 'Electronics' },
+    { name: 'Product D', category: 'Clothing' }
+  ];
+  
+  // Use reduce to group products by category
+  const groupedProducts = products.reduce((result, product) => {
+    // Check if the category already exists in the result object
+    if (!result[product.category]) {
+      // If not, create a new array for the category
+      result[product.category] = [];
     }
-    console.log("Sum of Elements:", result);
-}
-
-function sumOfIndices(numbers) {
-    let result = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        result += i;
-    }
-    console.log("Sum of Indices:", result);
-}
-
-// Example with an array containing negative numbers
-sumOfElements([-1, -2, -3]);  // Sum of Elements: -6
-sumOfIndices([-1, -2, -3]);   // Sum of Indices: 3
+  
+    // Add the current product to the array of its category
+    result[product.category].push(product);
+  
+    return result;
+  }, {});
+  
+  console.log(groupedProducts);
+  
