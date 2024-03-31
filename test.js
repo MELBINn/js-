@@ -1,66 +1,17 @@
-// function outerFunction() {
-//     let outerVariable = "I am from outerFunction";
-  
-//     function innerFunction() {
-//       console.log(outerVariable); // Accessing outerVariable from the outer function
-//     }
-  
-//     return innerFunction;
-//   }
-  
-//   // Create a closure by calling outerFunction and assigning the returned inner function to a variable
-//   let closure = outerFunction();
-  
-//   // Invoke the closure, which still has access to outerVariable
-//   closure(); // Output: I am from outerFunction
-  
+//sum of two numbers behind it
+function printFibonacci(n) {
+  let fibArray = [0, 1];
 
-function counter() {
-  let count = 0;
+  for (let i = 2; i < n; i++) {
+    fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+  }
 
-  return function() {
-    count++;
-    console.log(count);
-  };
+  console.log("Fibonacci Numbers:");
+  for (let i = 0; i < n; i++) {
+    console.log(fibArray[i]);
+  }
 }
 
-let increment = counter();
-
-increment(); // Output: 1
-increment(); // Output: 2
-
-function setupClickHandler() {
-  let count = 0;
-
-  document.getElementById('myButton').addEventListener('click', function() {
-    count++;
-    console.log('Button clicked ' + count + ' times');
-  });
-}
-
-setupClickHandler();
-
-
-function multiplyBy(factor) {
-  return function(x) {
-    return x * factor;
-  };
-}
-
-let multiplyByTwo = multiplyBy(2);
-console.log(multiplyByTwo(5)); // Output: 10
-
-
-function counter() {
-  let count = 0;
-
-  return function() {
-    count++;
-    console.log(count);
-  };
-}
-
-// let increment = counter();
-// increment(); // Output: 1
-// increment(); // Output: 2
-
+// Change the value of 'n' to print the desired number of Fibonacci numbers
+const n = 10;
+printFibonacci(n);
