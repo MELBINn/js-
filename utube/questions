@@ -1,0 +1,22 @@
+// console.log(a)// Cannot access 'a' before initialization ,hoisting
+// console.log(b)//b is not defined implicit the global var we cannot access implicit global var before declare
+
+// var a = b = 5;
+
+var a =2;
+var a = 3;// if let Identifier 'a' has already been declared,same scope
+//if var it will get 3 we can declare same var in scope in var
+console.log(a)
+
+//let = block scope  var = function scope
+
+// Shallow Copy:
+// A shallow copy of an object is a copy whose properties share the same references as the source object. This means changes
+//  to nested objects or arrays within the shallow copy will reflect in the original object and vice versa.
+
+// Deep Copy:
+// A deep copy of an object is a copy where all nested objects and arrays are also copied, so they do not share
+//  references with the original object. Changes to nested objects or arrays within the deep copy will not affect 
+//  the original object and vice versa.
+
+//check sort of number and string without inbuilt

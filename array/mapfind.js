@@ -11,3 +11,7 @@ const stringWithMaxLength = strings.find(str => str.length === maxLength);
 
 // Print the string with the biggest length
 console.log(`The string with the biggest length is: ${stringWithMaxLength}`);
+//grapefruit
+
+//if map [ false, false, false, true, false ]
+// if filter [ 'grapefruit' ]

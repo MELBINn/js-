@@ -1,4 +1,5 @@
-// The reason the first letter didn't change in the sorted output is because the `sort` method in JavaScript performs a lexicographic (dictionary) sorting, which is case-sensitive. In lexicographic sorting, uppercase letters 
+// The reason the first letter didn't change in the sorted output is because the `sort` method in JavaScript performs a lexicographic 
+//(dictionary) sorting, which is case-sensitive. In lexicographic sorting, uppercase letters 
 // are considered "less than" their lowercase counterparts. As a result, uppercase letters will appear 
 // before lowercase letters in the sorted order.
 
@@ -80,10 +81,13 @@ Output:
 
 //    Implementing custom sorting logic using a callback function.
 
-// The `sort` method is powerful and flexible, allowing you to sort arrays of various types based on different criteria. It's essential to understand that the default behavior is lexicographic (dictionary) sorting for strings, and a custom comparison function can be provided for more complex 
+// The `sort` method is powerful and flexible, allowing you to sort arrays of various types based on different criteria.
+// It's essential to understand that the default behavior is lexicographic (dictionary) sorting for strings, and 
+//a custom comparison function can be provided for more complex 
 // sorting requirements.
 
-// The `sort` method in JavaScript expects a comparison function that returns a negative, zero, or positive value, indicating the order of the elements. Specifically, when the comparison function returns:
+// The `sort` method in JavaScript expects a comparison function that returns a negative, zero, or positive value,
+// indicating the order of the elements. Specifically, when the comparison function returns:
 
 // - A negative value: It means `a` should be sorted before `b`.
 // - Zero: It means the order of `a` and `b` doesn't matter.
@@ -97,7 +101,8 @@ numbers.sort((a, b) => a - b);
 // Result: [1, 2, 5, 8, 9]
 ```
 
-// The comparison function `a - b` is subtracting `b` from `a`. When this result is negative, it indicates that `a` is smaller than `b`, so `a` should come before `b` in the sorted array. Therefore, the array is sorted in ascending order.
+// The comparison function `a - b` is subtracting `b` from `a`. When this result is negative, it indicates that `a` is
+// smaller than `b`, so `a` should come before `b` in the sorted array. Therefore, the array is sorted in ascending order.
 
 // Let's break down the sorting steps:
 
@@ -111,7 +116,8 @@ numbers.sort((a, b) => a - b);
 
 // As you can see, after these comparisons, the array becomes sorted in ascending order.
 
-// When sorting an array of strings using the sort method in JavaScript, it performs lexicographic (dictionary) sorting by default. Lexicographic sorting compares the strings 
+// When sorting an array of strings using the sort method in JavaScript, it performs lexicographic (dictionary) sorting 
+//by default. Lexicographic sorting compares the strings 
 // character by character based on their Unicode code points.
 
 // The `localeCompare` method in JavaScript is used for comparing strings based on the current locale 

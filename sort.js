@@ -71,6 +71,19 @@ let resultt = thing.sort((a, b) =>
   a.toLowerCase().localeCompare(b.toLowerCase())
 );
 
-let result = resultt.join(" ");
+let resul = resultt.join(" ");
 console.log(result);
 
+let string = "In the heart of the bustling city, #where the rhythmic hum of life @never seems to fade,"
+
+let result  = string.replace(/[#@,]/g, "").split(" ").sort((a, b) =>
+    a.toLowerCase().localeCompare(b.toLowerCase())).join()
+
+console.log(result)
+
+//replace method is not applicable to arrays.
+// let inputArray = ["#Hello", "@world", "this,is,a,test"];
+// let inputString = inputArray.join(" ");  // Join the array into a single string with spaces
+
+// let resultt = inputString.replace(/[#@,]/g, " ").split(" ").sort().join(" ");
+// console.log(resultt);

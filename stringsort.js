@@ -1,12 +1,12 @@
 let originalString = "Hello World!";
 let sortedLowercaseString = originalString.toLowerCase().split('').sort((a, b) => a.localeCompare(b)).join('');
 
-console.log(sortedLowercaseString); // Output: ' !deHllloorW'
+//console.log(sortedLowercaseString); // Output: ' !deHllloorW'
 
 const string = "In the vast tapestry of humanity, diversity emerges as a radiant thread, weaving together the rich fabric of our shared existence. Each individual, a unique hue in the palette of life, contributes to the collective masterpiece with their distinct experiences, perspectives, and aspirations."
 
 const result = string.toLocaleLowerCase().split(' ')
-// console.log(result)
+console.log(result)
 
 const reply = result.map((res)=>res.replace(/[,]/g,""))
 // console.log(reply)
@@ -14,7 +14,8 @@ const reply = result.map((res)=>res.replace(/[,]/g,""))
 const wordCount = {}
 reply.forEach(rep => {
   const lowerCaseWord =rep.toLowerCase();//lowercase oru value
-  //This line increments the count of the current lowerCaseWord in the wordCount object. If lowerCaseWord is not already a key in wordCount, it initializes the count to 1. The logical OR 
+  //This line increments the count of the current lowerCaseWord in the wordCount object. If lowerCaseWord is not already a 
+  //key in wordCount, it initializes the count to 1. The logical OR 
   //operator with 0 is used to provide a default value of 0 if the key doesn't exist.
   wordCount[lowerCaseWord] = (wordCount[lowerCaseWord] || 0) + 1;//
   //|| 0: This is a conditional expression that ensures the retrieved value is at least 0. 
@@ -31,7 +32,7 @@ reply.forEach(rep => {
  //f wordCount[lowerCaseWord] is falsy (i.e., it's undefined, null, false, 0, NaN, or an empty string), then the logical OR operator kicks in,
  // and the expression evaluates to the default value 0.
 });
-console.log(wordCount)
+//console.log(wordCount)
 //{ 'hello': 1 }
 
 //{ 'hello': 2, 'world': 1 }
