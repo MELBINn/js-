@@ -4,7 +4,7 @@ var matrix = [
     [9, 8, 9]
 ];
 console.log(matrix.length)//3
-console.log(matrix[2])//[ 4, 5, 6 ]
+console.log(matrix[2])//[ 9, 8, 9 ]
 
 
 for (let i = 0; i < matrix.length; i++) {
@@ -12,6 +12,22 @@ for (let i = 0; i < matrix.length; i++) {
         console.log("Element at index (" + i + ", " + j + "): " + matrix[i][j]);
     }
  }
+
+ // Function to create a 2D array with specified rows and columns, filled with sequential numbers
+function create2DArray(row,col){
+    let arr = [];
+    let num = 1
+  
+    for(let i=0;i<row;i++){//1 time avumbol j three time
+        let row = [];
+        for(let j=0;j<col;j++){
+            row.push(num)
+            num++
+        }
+        arr.push(row)   
+    }
+    return arr;
+}
 // In JavaScript, a two-dimensional array is essentially an array of arrays. Each element in 
 // the outer array is itself an array, representing a row in the matrix. The expression matrix[i]
 //  accesses the i-th element of the outer array, which is an array representing a row in the matrix.
