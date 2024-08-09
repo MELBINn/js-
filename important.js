@@ -126,3 +126,15 @@
 
 // let resultz = array12.map((i)=>{
 //     if(array12[i]==array21[i]){
+
+
+//(output[item.sam]) object ullile array ullile sadanm edukan
+//numberCount[number] number count object numbers access
+
+// let person = {
+//     name: "John",
+//     age: 30,
+//     hobbies: ["reading", "traveling", "swimming"]
+// };
+
+//console.log(person.hobbies[2]); // Output: "swimming"
