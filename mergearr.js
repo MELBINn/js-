@@ -61,3 +61,13 @@ const mergedddddArray = Array.from(array1).concat(array2);
 
 console.log(mergedddddArray); // Output: [1, 2, 3, 4, 5, 6]
 
+
+array1=[...array1,...array2]
+ 
+array1 = array1.concat(array2)
+
+Array.prototype.push.apply(array1, array2);
+
+for(i=0;i<array2.length;i++){
+    array1.push(array2[i])
+}

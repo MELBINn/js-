@@ -1,0 +1,7 @@
+maxNumber = numbers[i];
+//let maxNumber = numbers[0]; becoz its just a number not an array top push
+//interchanging
+//first temp value eduth vekukua
+let temp = arr[j]
+arr[j] = arr[j+1]
+arr[j+1] = temp

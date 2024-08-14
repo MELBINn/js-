@@ -1,35 +1,49 @@
-function mergeSortedArrays(arr1, arr2) {
-    let merged = [];
-    let i = 0, j = 0;
+// function compareArrays(ab, ba) {
+//     let aliceScore = 0;
+//     let bobScore = 0;
 
-    // Iterate through both arrays and merge them into one
-    while (i < arr1.length && j < arr2.length) {
-        if (arr1[i] < arr2[j]) {
-            merged.push(arr1[i]);
-            i++;
-        } else {
-            merged.push(arr2[j]);
-            j++;
+//     for (let i = 0; i < ab.length; i++) {
+//         for(let j = 0; j < ba.length; j++){
+//             if (ab[i] > ba[i]) {
+//                 aliceScore++;
+//             } else if (ab[i] < ba[i]) {
+//                 bobScore++;
+//             }
+//         }
+       
+//     }
+
+//     return [aliceScore, bobScore];
+// }
+
+// const ab = [1, 4, 3];
+// const ba = [3, 2, 5];
+// const result = compareArrays(ab, ba);
+
+// console.log(result); // Output: [1, 1]
+
+function compareArrays(a, b) {
+    let aliceScore = 0;
+    let bobScore = 0;
+
+    // Determine the minimum length of the two arrays
+    const minLength = Math.min(a.length, b.length);
+
+    for (let i = 0; i < minLength; i++) {
+        if (a[i] > b[i]) {
+            aliceScore++;
+        } else if (a[i] < b[i]) {
+            bobScore++;
         }
+        // If elements are equal, no points are earned.
     }
 
-    // If there are remaining elements in arr1, add them to the merged array
-    while (i < arr1.length) {
-        merged.push(arr1[i]);
-        i++;
-    }
-
-    // If there are remaining elements in arr2, add them to the merged array
-    while (j < arr2.length) {
-        merged.push(arr2[j]);
-        j++;
-    }
-
-    return merged;
+    return [aliceScore, bobScore];
 }
 
-// Example usage:
-const array1 = [1, 3, 5, 7];
-const array2 = [2, 4, 6, 8];
-const mergedArray = mergeSortedArrays(array1, array2);
-console.log(mergedArray);  // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+// Example usage
+const a = [1, 2, 3];
+const b = [3, 2, 1, 4, 5];
+const resultt = compareArrays(a, b);
+
+console.log(resultt); // Output: [1, 1]
