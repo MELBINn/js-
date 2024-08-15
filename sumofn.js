@@ -34,3 +34,14 @@ for (let i = startIndex; i <= endIndex; i++) {
 }
 
 console.log(sumOfElements);
+
+
+function sumofn(arr,n,m){
+    let result = 0;
+    
+    for(i=n;i<=m;i++){
+        result += arr[i]
+    }
+    console.log(result) 
+}
+(sumofn([1,2,3,4,5,6],2,4))

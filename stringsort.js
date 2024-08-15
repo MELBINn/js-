@@ -11,7 +11,7 @@ console.log(result)
 const reply = result.map((res)=>res.replace(/[,]/g,""))
 // console.log(reply)
 
-const wordCount = {}
+const wordCount = {} 
 reply.forEach(rep => {
   const lowerCaseWord =rep.toLowerCase();//lowercase oru value
   //This line increments the count of the current lowerCaseWord in the wordCount object. If lowerCaseWord is not already a 

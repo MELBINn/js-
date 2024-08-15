@@ -5,3 +5,48 @@ maxNumber = numbers[i];
 let temp = arr[j]
 arr[j] = arr[j+1]
 arr[j+1] = temp
+
+function numbers(a,b){
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    console.log("swap no are",a,b)
+}
+numbers(1,2)
+
+function sumofarr (arr , n){
+    result = 0;
+    for(i=0;i<=n;i++){ //i is 0,1,2,3 bt n is 1 2 3 4 so i<n
+        //so ivde ahn i<=n vndath becoz oru number koravalle so equal to
+        //bt inngne ittal result 10 ahn so < mathi ivde
+        result += arr[i]
+    }
+    console.log(result)
+}
+sumofarr([1,2,3,4,5],3)
+
+let object = {
+    name: "jo#",
+    place: "hello#"
+};
+
+const resulttt = {
+    name: object.name.split('#'),
+    place: object.place.split('#')
+};
+
+console.log(resulttt);//{ name: [ 'jo', '' ], place: [ 'hello', '' ] }
+
+const points = [40, 100, 1, 5, 25, 10];
+
+for (let i = points.length -1; i > 0; i--) {
+  let j = Math.floor(Math.random() * (i+1));
+  let k = points[i];
+  points[i] = points[j];
+  points[j] = k;
+}
+//can we use for loop in string for sort
+//split chytha array ahn result
+//pinem string ahn join
+
+for(i=values.length-1 ;i>=0;i--){//ibde i>=0 venm becz nmuk 0 vre athyath arr first element vre chellanm
