@@ -49,4 +49,10 @@ for (let i = points.length -1; i > 0; i--) {
 //split chytha array ahn result
 //pinem string ahn join
 
-for(i=values.length-1 ;i>=0;i--){//ibde i>=0 venm becz nmuk 0 vre athyath arr first element vre chellanm
+// for(i=values.length-1 ;i>=0;i--){//ibde i>=0 venm becz nmuk 0 vre athyath arr first element vre chellanm
+
+//     duplicate repeated casil object repeted duplicate stire pinne condition ready aya push to array
+
+//     arr push chyumbo bracket uniqueArray.push(number);
+
+max min avumbo array first num arr[0] max ayt eduka

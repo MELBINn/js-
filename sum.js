@@ -7,6 +7,15 @@ function sum(numbers){
 }
 sum([1,2,3])
 
+
+function sum(numbers){
+  let result = 0;
+  for(i=0;i<numbers.length;i++){
+    result +=numbers[i]
+  }
+  console.log(result)
+}
+sum([1,2,3])
 // function summ(num){
 //   let res = 0;
 //   num.forEach(n=> {

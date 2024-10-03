@@ -1,3 +1,21 @@
+let arr = [1,1,2,3,3,4,5,6,6]
+
+let numberCountt = {};
+let repeated = [];
+
+arr.map((n)=>{
+  numberCountt[n] = (numberCountt[n] || 0)+1
+})
+
+for(const n in numberCountt){
+    if(numberCountt[n]>1){
+        repeated.push(n)
+    }
+}
+repeated.map((n)=>{
+  console.log(`${n} : ${numberCountt[n]} times`)
+})
+
 const numbersArray = [1, 2, 3, 4, 2, 5, 6, 3];
 
 // Step 1: Initialize an empty object to store the count of each number
@@ -44,19 +62,3 @@ repeatedNumbers.forEach((num)=>console.log(`${num} : ${numberCount[num]}times`))
 // console.log(greeting); // Output: Hello, John!
 
 
-function findRepeatedWords(words) {
-    let wordCount = {};
-  
-    //Count the occurrences of each word
-    words.forEach((word) => {
-      const lowerCaseWord = word.toLowerCase();
-      wordCount[lowerCaseWord] = (wordCount[lowerCaseWord] || 0) + 1;
-    });
-  
-    //Find words with more than one occurrence
-    const repeatedWords = Object.keys(wordCount).filter(
-      (word) => wordCount[word] > 1
-    );
-  
-    return repeatedWords;
-  }
